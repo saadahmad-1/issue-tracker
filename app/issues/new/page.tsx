@@ -1,7 +1,8 @@
 "use client";
 
-import { Button, TextArea, TextField, TextFieldRoot } from "@radix-ui/themes";
-import React from "react";
+import { Button, TextField, TextFieldRoot } from "@radix-ui/themes";
+import SimpleMDE from "react-simplemde-editor";
+import "easymde/dist/easymde.min.css";
 
 const NewIssuePage = () => {
   return (
@@ -9,7 +10,7 @@ const NewIssuePage = () => {
       <TextFieldRoot>
         <TextField.Input placeholder="Title" />
       </TextFieldRoot>
-      <TextArea placeholder="Description" />
+      <SimpleMDE placeholder="Description" />
       <Button>Submmit New Issue</Button>
     </div>
   );
